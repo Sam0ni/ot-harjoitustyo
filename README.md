@@ -1,4 +1,4 @@
-# **testiteksti** w/*kursiivi*
+# tämä on **testiteksti** w/*kursiivi*
 ### viikko 1
 [komentorivi.txt](https://github.com/Sam0ni/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
