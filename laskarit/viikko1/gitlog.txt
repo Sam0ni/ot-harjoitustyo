@@ -1,0 +1,113 @@
+commit bce7721af660d0e199353b3730e0a5a90202a40c
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 20:27:54 2022 +0200
+
+    poista file1 muuta file2 file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 9e3ac4e6de4f886b9a67d2049384163c3f364c6b
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 20:23:19 2022 +0200
+
+    lisää tiedostoja/
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 5dc7b26e16ae43f1d71d39dd77225a1d9fdcd0fd
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 20:19:14 2022 +0200
+
+    muokkaa eka.txt ja kolmas.txt
+
+ eka.txt    | 3 ++-
+ kolmas.txt | 2 +-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+commit a13700036b7501454397b8f628c6676b9530ef7d
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 20:15:30 2022 +0200
+
+    uudelleennimeä tiedosto.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 68eb37f36862eb1c8741fce437112adb20bc50d1
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 20:13:40 2022 +0200
+
+    poista toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit e05736288c60435924bd0aeb8583c1697610ff19
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 20:10:57 2022 +0200
+
+    muokkaa tiedosto.txt
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 41f63dd1db3889c09dc85c3253f49fa8b1d7b3d7
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 20:08:56 2022 +0200
+
+    "muokkaa tiedosto.txt"
+
+ tiedosto.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 2f659157e7393b81120113f8ca741f011c703b0b
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 20:00:39 2022 +0200
+
+    lisää stuff
+
+ stuff/stuff.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 42b7ccdd14031d57bb080230c55ca64c9356f57d
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 19:59:13 2022 +0200
+
+    muokkaa toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 10b0c391d08b272bf7f04938e46433000ad51abf
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 19:57:34 2022 +0200
+
+    kolmas.txt lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b8a8973d1872da204cbf074d017d32a418ec8993
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 19:55:25 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit fbc6291ae8396a22da298a3d4e8830399a74899c
+Author: Samppa <samppasalo16@gmail.com>
+Date:   Tue Mar 22 19:52:46 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
