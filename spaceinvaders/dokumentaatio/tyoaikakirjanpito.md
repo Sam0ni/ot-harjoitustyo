@@ -6,4 +6,4 @@
 | 4.4   | 3    | Päähahmon liikkeen testaus ja päähahmon ja vihollisten liikkeen toteutus|
 | 6.3   | 1    | Ampumisen toteutus|
 | 9.4   | 2    | Ammusten ja vihollisten törmäys ja tehosteiden putoaminen toteutettu|
-
+| yht   | 9    ||
