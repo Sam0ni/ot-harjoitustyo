@@ -78,10 +78,10 @@ class Space:
 
     def shoot_a_pellet(self, playerx, playery=620):
         if self.pierce:
-            self.pellets.add(Pellet(playerx, playery, True))
+            self.pellets.add(Pellet(playerx + (self.player.width/2), playery, True))
             self.pierce = False
         else:
-            self.pellets.add(Pellet(playerx, playery))
+            self.pellets.add(Pellet(playerx + (self.player.width/2), playery))
 
     def move_pellets(self, horizontalspeed=0, verticalspeed=0):
         for i in self.pellets:
@@ -89,8 +89,8 @@ class Space:
             if i.rect.y < -50:
                 i.kill()
             if i.pierce:
-                pygame.sprite.spritecollide(i, self.invaders, True)
-                return True
+                if pygame.sprite.spritecollide(i, self.invaders, True):
+                    return True
             else:
                 if pygame.sprite.spritecollide(i, self.invaders, True):
                     if random.randint(1, 10) < 3:

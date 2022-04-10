@@ -9,7 +9,7 @@ class Pellet(pygame.sprite.Sprite):
         super().__init__()
 
         self.image = pygame.image.load(
-            os.path.join(dirname, "..", "assets", "player.png")
+            os.path.join(dirname, "..", "assets", "pellet.png")
         )
 
         self.rect = self.image.get_rect()
