@@ -8,3 +8,6 @@
 
 ### Changelog
 [changelog.md](https://github.com/Sam0ni/ot-harjoitustyo/blob/master/spaceinvaders/dokumentaatio/changelog.md)
+
+### Arkkitehtuuri
+[arkkitehtuuri.md](https://github.com/Sam0ni/ot-harjoitustyo/blob/master/spaceinvaders/dokumentaatio/arkkitehtuuri.md)
