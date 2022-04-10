@@ -1,16 +1,18 @@
-import pygame
 import os
+import pygame
 
 dirname = os.path.dirname(__file__)
 
+
 class Player(pygame.sprite.Sprite):
-    def __init__(self, x=0, y=0):
+    def __init__(self, pos_x=0, pos_y=0):
         super().__init__()
 
         self.image = pygame.image.load(
             os.path.join(dirname, "..", "assets", "player.png")
         )
+        self.width = self.image.get_width()
 
         self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
+        self.rect.x = pos_x
+        self.rect.y = pos_y

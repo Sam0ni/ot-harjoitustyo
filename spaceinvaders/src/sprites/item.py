@@ -4,7 +4,7 @@ import pygame
 dirname = os.path.dirname(__file__)
 
 
-class Invader(pygame.sprite.Sprite):
+class Item(pygame.sprite.Sprite):
     def __init__(self, pos_x=0, pos_y=0):
         super().__init__()
 
