@@ -18,7 +18,12 @@ class Space:
         self.initsprites()
         self.invadersgoleft = True
         self.invadersgodown = False
+        self.invaderspeed = 1
         self.pierce = False
+        self.shottimer = 0
+        self.victorious = False
+        self.score = 0
+        self.time = 300
 
     def initsprites(self):
         # player
@@ -90,11 +95,13 @@ class Space:
                 i.kill()
             if i.pierce:
                 if pygame.sprite.spritecollide(i, self.invaders, True):
+                    self.score += 10
                     return True
             else:
                 if pygame.sprite.spritecollide(i, self.invaders, True):
                     if random.randint(1, 10) < 3:
                         self.items.add(Item(i.rect.x, i.rect.y))
+                    self.score += 10
                     i.kill()
                     return True
 
