@@ -14,3 +14,4 @@ class Scores:
         cursor = self._connection.cursor()
         cursor.execute("INSERT INTO Highscores (name, score) VALUES (?, ?)", (name, score))
         self._connection.commit()
+    

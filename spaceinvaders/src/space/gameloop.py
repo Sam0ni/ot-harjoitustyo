@@ -1,4 +1,5 @@
 import pygame
+import scores.scores
 
 
 class Gameloop:
@@ -66,8 +67,6 @@ class Gameloop:
                 break
             if self._save_scores:
                 scores.save_scores()
-                
-
 
     def _end_events(self):
         for event in pygame.event.get():

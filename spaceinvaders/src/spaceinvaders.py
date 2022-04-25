@@ -15,8 +15,7 @@ def main():
     pygame.display.set_caption("Space Invaders")
 
     space_map = Space(displaywidth, displayheight)
-    menu = Menu(displaywidth, displayheight)
-    score = Scores(get_database_connection())
+    menu = Menu()
 
     pygame.init()
     menuloop = Menuloop(disp, menu)

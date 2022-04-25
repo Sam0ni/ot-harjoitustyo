@@ -33,10 +33,10 @@ class Menuloop:
                 if event.key == pygame.K_UP:
                     self._menu.move_cursor_up()
                 if event.key == pygame.K_SPACE:
-                    if self._menu.go() == "highscores":
+                    if self._menu.go_there() == "highscores":
                         self._menu.inithighscores(self._scores)
                         self._showhighscores = True
-                    elif self._menu.go():
+                    elif self._menu.go_there():
                         self._startgame = True
                     else:
                         self._quitgame = True

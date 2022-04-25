@@ -1,15 +1,13 @@
 import pygame
 
 class Menu:
-    def __init__(self, dispx, dispy):
+    def __init__(self):
         pygame.font.init()
         self.cursor = 1
         self.start_color = (255,0,0)
         self.scores_color = (0,0,255)
         self.quit_color = (0,0,255)
         self.font = pygame.font.Font('freesansbold.ttf', 32)
-        self.displaywidth = dispx
-        self.displayheight = dispy
         self.starttext = ""
         self.scorestext = ""
         self.quittext = ""
@@ -34,7 +32,7 @@ class Menu:
             self.quit_color = (0,0,255)
             self.scores_color = (255,0,0)
         self.initfonts()
-    
+
     def move_cursor_down(self):
         if self.cursor == 1:
             self.cursor = 2
@@ -50,7 +48,7 @@ class Menu:
             self.start_color = (255,0,0)
         self.initfonts()
 
-    def go(self):
+    def go_there(self):
         if self.cursor == 1:
             return True
         elif self.cursor == 3:
