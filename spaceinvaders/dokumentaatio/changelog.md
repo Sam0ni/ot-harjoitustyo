@@ -11,5 +11,11 @@
 - Lisätty testi ampumisen toimimiselle, ammuksen liikkumiselle ja ammusten törmäys vihollisiin
 
 ## Viikko 5
+
 - Peli loppuu nyt kun kaikki viholliset on tuhottu
 - Pelissä on nyt päävalikko
+
+## Viikko 6
+
+- Pelissä näkee nyt pistetaulukon
+- Peli tallentaa nyt pisteet
