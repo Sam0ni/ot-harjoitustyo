@@ -8,4 +8,5 @@
 | 9.4   | 2    | Ammusten ja vihollisten törmäys ja tehosteiden putoaminen toteutettu|
 | 24.4  | 2    | Menun toteutus|
 | 25.4  | 2    | Pelin loppumisen toteutus ja sqliten alustavien funktioiden toteutus|
-| yht   | 13    ||
+| 28.4  | 3    | Tietokannan ja pistetaulukon toteutus|
+| yht   | 13   ||
