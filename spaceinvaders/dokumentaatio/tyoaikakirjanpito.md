@@ -9,4 +9,4 @@
 | 24.4  | 2    | Menun toteutus|
 | 25.4  | 2    | Pelin loppumisen toteutus ja sqliten alustavien funktioiden toteutus|
 | 28.4  | 3    | Tietokannan ja pistetaulukon toteutus|
-| yht   | 13   ||
+| yht   | 16   ||
