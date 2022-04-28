@@ -16,6 +16,7 @@ Sovellus on hieman muunneltu versio Space Invades -pelistä. Pelaajan pitää tu
 [arkkitehtuuri.md](https://github.com/Sam0ni/ot-harjoitustyo/blob/master/spaceinvaders/dokumentaatio/arkkitehtuuri.md)
 
 ### Käyttöohje
+[kayttoohje.md](https://github.com/Sam0ni/ot-harjoitustyo/blob/master/spaceinvaders/dokumentaatio/kayttoohje.md)
 
 ### Komentorivillä suoritettavat komennot
 - Sovelluksen käynnistys = poetry run invoke start
