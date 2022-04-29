@@ -22,10 +22,10 @@ Pelin logiikasta vastaa luokka Space ja sen yhteen kokoamat luokat Player, Invad
 ![sovelluslogiikka](https://user-images.githubusercontent.com/101888699/165995948-37d7e74e-38e6-4330-a0eb-8e85f87b5edf.png)
 
 Space-luokan metodeista seuraavat vastaavat objektien liikuttamisesta:
-- move_player
-- move_invaders
-- move_pellets
-- move_items
+- move_player(direct_x, direct_y)
+- move_invaders(direct_x, direct_y)
+- move_pellets(horizontalspeed, verticalspeed)
+- move_items(horizontalspeed, verticalspeed)
 
 Seuraava metodi lisää Pellet-olion:
-- shoot_a_pellet
+- shoot_a_pellet(playerx, playery)
