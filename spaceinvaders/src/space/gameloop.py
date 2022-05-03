@@ -1,9 +1,13 @@
 import pygame
-import scores.scores
+from scores.scores import Scores
+from database_connection import get_database_connection
 
 
 class Gameloop:
     def __init__(self, space_map, display):
+        pygame.font.init()
+        self._font = pygame.font.Font('freesansbold.ttf', 32)
+        self._database = Scores(get_database_connection())
         self._map = space_map
         self._clock = pygame.time.Clock()
         self._disp = display
@@ -11,11 +15,17 @@ class Gameloop:
         self._right = False
         self._player_name = ""
         self._save_scores = False
+        self._time_counter = 60
+        self._pscore = ""
 
     def start(self):
         while True:
             if self._map.victorious:
+                self._start_ending()
                 break
+            if self._time_counter == 0:
+                self._time_counter = 60
+                self._map.time -= 1
 
             if self._events() is False:
                 break
@@ -32,6 +42,7 @@ class Gameloop:
             self._map.shottimer -= 1
 
             self._render()
+            self._time_counter -= 1
 
             self._clock.tick(60)
 
@@ -66,7 +77,9 @@ class Gameloop:
             if self._end_events() is False:
                 break
             if self._save_scores:
-                scores.save_scores()
+                self._database.save_scores(self._player_name, int(self._pscore))
+                break
+            self._render_ending()
 
     def _end_events(self):
         for event in pygame.event.get():
@@ -78,3 +91,13 @@ class Gameloop:
                     self._player_name += event.unicode
             elif event.type == pygame.QUIT:
                 return False
+
+    def _render_ending(self):
+        self._disp.fill((0,0,0))
+        pname = f"name = {self._player_name}"
+        pname = self._font.render(pname, True, (255,0,0))
+        self._pscore = str(self._map.score + self._map.time * 10)
+        pscoretext = self._font.render(self._pscore, True, (255,0,0))
+        self._disp.blit(pname, (600,300))
+        self._disp.blit(pscoretext, (600,400))
+        pygame.display.update()

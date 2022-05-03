@@ -3,7 +3,6 @@ from space.space import Space
 from space.gameloop import Gameloop
 from menu.menuloop import Menuloop
 from menu.menu import Menu
-from database_connection import get_database_connection
 from scores.scores import Scores
 
 

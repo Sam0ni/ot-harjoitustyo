@@ -7,7 +7,15 @@ from sprites.item import Item
 
 
 class Space:
+    """Class that compiles all assets used for the game
+    """
     def __init__(self, map_x, map_y):
+        """Class constructor which creates the game
+
+        Args:
+            map_x (integer): the width of the game area
+            map_y (integer): the height of the game area 
+        """
         self.mapwidth = map_x
         self.mapheight = map_y
         self.player = None
@@ -26,6 +34,8 @@ class Space:
         self.time = 300
 
     def initsprites(self):
+        """Initializes all the preliminary sprites for the game
+        """
         # player
         self.player = Player(self.mapwidth/2, self.mapheight-100)
 
@@ -51,6 +61,12 @@ class Space:
         )
 
     def move_player(self, direct_x=0, direct_y=0):
+        """Moves the player
+
+        Args:
+            direct_x (int, optional): amount of pixels moved horizontally. Defaults to 0.
+            direct_y (int, optional): amount of pixels moved vertically (not used). Defaults to 0.
+        """
         if direct_x > 0:
             if self.player.rect.x + direct_x > self.mapwidth - self.player.width:
                 pass
@@ -63,6 +79,12 @@ class Space:
                 self.player.rect.move_ip(direct_x, direct_y)
 
     def move_invaders(self, direct_x=0, direct_y=0):
+        """Moves the enemies
+
+        Args:
+            direct_x (int, optional): amount of pixels moved horizontally. Defaults to 0.
+            direct_y (int, optional): amount of pixels moved vertically. Defaults to 0.
+        """
         for i in self.invaders:
             if not self.invadersgoleft:
                 if i.rect.x + 40 + direct_x > self.mapwidth:
@@ -82,6 +104,12 @@ class Space:
         self.invadersgodown = False
 
     def shoot_a_pellet(self, playerx, playery=620):
+        """Adds a pellet
+
+        Args:
+            playerx (int): players position horizontally
+            playery (int, optional): players position vertically. Defaults to 620.
+        """
         if self.pierce:
             self.pellets.add(Pellet(playerx + (self.player.width/2), playery, True))
             self.pierce = False
@@ -89,6 +117,15 @@ class Space:
             self.pellets.add(Pellet(playerx + (self.player.width/2), playery))
 
     def move_pellets(self, horizontalspeed=0, verticalspeed=0):
+        """Moves pellets if there are any
+
+        Args:
+            horizontalspeed (int, optional): amount of pixels moved horizontally. Defaults to 0.
+            verticalspeed (int, optional): amount of pixels moved vertically. Defaults to 0.
+
+        Returns:
+            True: if an enemy is killed
+        """
         for i in self.pellets:
             i.rect.move_ip(horizontalspeed, verticalspeed)
             if i.rect.y < -50:
@@ -106,6 +143,12 @@ class Space:
                     return True
 
     def move_items(self, horizontalspeed=0, verticalspeed=0):
+        """Moves items if there are any
+
+        Args:
+            horizontalspeed (int, optional): amount of pixels moved horizontally. Defaults to 0.
+            verticalspeed (int, optional): amount of pixels moved vertically. Defaults to 0.
+        """
         for i in self.items:
             i.rect.move_ip(horizontalspeed, verticalspeed)
             if i.rect.y < -50:

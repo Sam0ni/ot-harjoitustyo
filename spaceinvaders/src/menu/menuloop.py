@@ -3,10 +3,11 @@ import pygame
 
 class Menuloop:
     def __init__(self, display, menu):
+        pygame.font.init()
         self._clock = pygame.time.Clock()
         self._disp = display
         self._menu = menu
-        #self._scores = scores.get_scores()
+        self._scores = ""
         self._showhighscores = False
         self._startgame = False
         self._quitgame = False
@@ -34,7 +35,7 @@ class Menuloop:
                     self._menu.move_cursor_up()
                 if event.key == pygame.K_SPACE:
                     if self._menu.go_there() == "highscores":
-                        self._menu.inithighscores(self._scores)
+                        self._scores = self._menu.inithighscores()
                         self._showhighscores = True
                     elif self._menu.go_there():
                         self._startgame = True
@@ -54,4 +55,11 @@ class Menuloop:
 
     def _renderhighscores(self):
         self._disp.fill((0, 0, 0))
+        counter = 1
+        for i in self._scores:
+            player = self._menu.font.render(i[0], True, (255,0,0), (0,0,150))
+            score = self._menu.font.render(str(i[1]), True, (255,0,0), (0,0,150))
+            self._disp.blit(player, (200, counter*50))
+            self._disp.blit(score, (350, counter*50))
+            counter += 1
         pygame.display.update()
