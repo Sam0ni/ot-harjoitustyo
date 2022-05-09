@@ -23,6 +23,10 @@ class Gameloop:
             if self._map.victorious:
                 self._start_ending()
                 break
+            if self._map.gameover:
+                self._map.time = 0
+                self._start_ending()
+                break
             if self._time_counter == 0:
                 self._time_counter = 60
                 self._map.time -= 1
@@ -38,6 +42,7 @@ class Gameloop:
                 if len(self._map.invaders) == 0:
                     self._map.victorious = True
                 self._map.invaderspeed += 0.1
+            self._map.move_invader_pellets(0, 4)
             self._map.move_items(0, 4)
             self._map.shottimer -= 1
 
@@ -70,6 +75,7 @@ class Gameloop:
         self._map.allsprites.draw(self._disp)
         self._map.pellets.draw(self._disp)
         self._map.items.draw(self._disp)
+        self._map.invaderpellets.draw(self._disp)
         pygame.display.update()
 
     def _start_ending(self):

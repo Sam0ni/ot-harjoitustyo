@@ -21,6 +21,7 @@ class Space:
         self.player = None
         self.invaders = pygame.sprite.Group()
         self.pellets = pygame.sprite.Group()
+        self.invaderpellets = pygame.sprite.Group()
         self.items = pygame.sprite.Group()
         self.allsprites = pygame.sprite.Group()
         self.initsprites()
@@ -30,6 +31,7 @@ class Space:
         self.pierce = False
         self.shottimer = 0
         self.victorious = False
+        self.gameover = False
         self.score = 0
         self.time = 300
 
@@ -95,8 +97,19 @@ class Space:
                     self.invadersgodown = True
                     self.invadersgoleft = False
         for i in self.invaders:
+            if random.randint(1, 1000) < 3:
+                canshoot = True
+                for j in self.invaders:
+                    if i.rect.y + 60 == j.rect.y:
+                        canshoot = False
+                        break
+                if canshoot:
+                    self.invaderpellets.add(Pellet(i.rect.x, i.rect.y))
             if self.invadersgodown:
                 i.rect.move_ip(0, 5)
+                if i.rect.y > 600:
+                    self.gameover = True
+                    break
             elif self.invadersgoleft:
                 i.rect.move_ip(-direct_x, direct_y)
             elif not self.invadersgoleft:
@@ -141,6 +154,18 @@ class Space:
                     self.score += 10
                     i.kill()
                     return True
+
+    def move_invader_pellets(self, horizontalspeed=0, verticalspeed=0):
+        for i in self.invaderpellets:
+            i.rect.move_ip(horizontalspeed, verticalspeed)
+            if i.rect.y > 730:
+                i.kill()
+            else:
+                if pygame.sprite.collide_rect(i, self.player):
+                    self.player.health -= 1
+                    if self.player.health == 0:
+                        self.gameover = True
+                    i.kill()
 
     def move_items(self, horizontalspeed=0, verticalspeed=0):
         """Moves items if there are any
