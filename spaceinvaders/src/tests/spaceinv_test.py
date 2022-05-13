@@ -25,12 +25,18 @@ class TestLevel(unittest.TestCase):
         self.map.move_player(direct_x=-100)
         self.assert_coordinates_equal(player, 1280/2 - 100, 720-100)
 
+        self.map.move_player(direct_x=+100)
+        self.assert_coordinates_equal(player, 1280/2, 720-100)
+
     def test_cannot_move_beyond_edges(self):
         player = self.map.player
 
         self.assert_coordinates_equal(player, 1280/2, 720-100)
 
         self.map.move_player(direct_x=-1000)
+        self.assert_coordinates_equal(player, 1280/2, 720-100)
+
+        self.map.move_player(direct_x=+1000)
         self.assert_coordinates_equal(player, 1280/2, 720-100)
 
     def test_shooting_works(self):
@@ -117,3 +123,4 @@ class TestLevel(unittest.TestCase):
         self.assertEqual(self.menu.cursor, 1)
         self.assertEqual(self.menu.quit_color, (0,0,255))
         self.assertEqual(self.menu.start_color, (255,0,0))
+        
