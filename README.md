@@ -18,6 +18,9 @@ Sovellus on hieman muunneltu versio Space Invades -pelistä. Pelaajan pitää tu
 ### Käyttöohje
 [kayttoohje.md](https://github.com/Sam0ni/ot-harjoitustyo/blob/master/spaceinvaders/dokumentaatio/kayttoohje.md)
 
+### Testausdokumentti
+[testaus.md](https://github.com/Sam0ni/ot-harjoitustyo/blob/master/spaceinvaders/dokumentaatio/testaus.md)
+
 ### Sovelluksen asennus
 Suorita komentorivillä komento "poetry install"
 
