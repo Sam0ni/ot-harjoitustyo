@@ -10,4 +10,5 @@
 | 25.4  | 2    | Pelin loppumisen toteutus ja sqliten alustavien funktioiden toteutus|
 | 28.4  | 3    | Tietokannan ja pistetaulukon toteutus|
 | 8.5   | 4    | Vihollisten ampumisen ja pelin häviöön loppumisen toteutus|
-| yht   | 20   ||
+| 13.5  | 2    | Dokumentaation, docstringien ja testien päivitys|
+| yht   | 22   ||
