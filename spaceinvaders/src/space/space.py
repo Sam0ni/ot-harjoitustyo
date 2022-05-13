@@ -156,6 +156,12 @@ class Space:
                     return True
 
     def move_invader_pellets(self, horizontalspeed=0, verticalspeed=0):
+        """Moves invaders pellets if there are any
+
+        Args:
+            horizontalspeed (int, optional): amount of pixels moved horizontally. Defaults to 0.
+            verticalspeed (int, optional): amount of pixels moved vertically. Defaults to 0.
+        """
         for i in self.invaderpellets:
             i.rect.move_ip(horizontalspeed, verticalspeed)
             if i.rect.y > 730:
