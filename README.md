@@ -1,7 +1,7 @@
 # Space Invaders
 
 ## Sovelluksen kuvaus
-Sovellus on hieman muunneltu versio Space Invades -pelistä. Pelaajan pitää tuhota kaikki viholliset ennen kuin ne ehtivä laskeutua liian alas.
+Sovellus on hieman muunneltu versio Space Invades -pelistä. Pelaajan pitää tuhota kaikki viholliset ennen kuin ne ehtivä laskeutua liian alas. Pelaajan on myös väisteltävä vihollisten ammuksia. Joskus kun vihollisen tuhoaa, pudottaa tämä pienen laatikon, jonka napattuaan pelaaja voi ampua lävistävän ammuksen. Päävalikossa pystyy katsella pistetaulukkoa.
 
 ### Vaatimusmäärittely
 [vaatimusmaarittely.md](https://github.com/Sam0ni/ot-harjoitustyo/blob/master/spaceinvaders/dokumentaatio/vaatimusmaarittely.md)
