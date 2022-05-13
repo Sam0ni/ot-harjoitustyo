@@ -1,17 +1,17 @@
 # Vaatimusmäärittely
 ## Sovelluksen tarkoitus
 Sovellus on hieman muunneltu versio klassikkopelistä Space Invaders.
-## Suunnitellut toiminnallisuudet
--Pelaaja voi liikuttaa hahmoaan oikealle ja vasemmalle, ja voi ampua ylös. !tehty!
+## Toiminnallisuudet
+-Pelaaja voi liikuttaa hahmoaan oikealle ja vasemmalle, ja voi ampua ylös.
 
--Vihollishahmot laskeutuvat ylhäältä !tehty!, ja ne kaikki pitää tuhota ennen kuin ne pääsevät liian alas.
+-Vihollishahmot laskeutuvat ylhäältä, ja ne kaikki pitää tuhota ennen kuin ne pääsevät liian alas.
 
--Vihollishahmot nopeutuvat mitä enemmän niitä tuhoaa. !tehty!
+-Vihollishahmot nopeutuvat mitä enemmän niitä tuhoaa.
 
--Vihollishahmot myös ampuvat välillä alas päin.
+-Vihollishahmot myös ampuvat välillä alas päin. Mikäli pelaajaan osuu liian monta ammusta, hän häviää.
 
--Kun pelaaja tuhoaa vihollishahmon, on mahdollisuus että se pudottaa objektin, joka tehostaa pelaajan ampumista jollain tavalla. !tehty!
+-Kun pelaaja tuhoaa vihollishahmon, on mahdollisuus että se pudottaa objektin, joka antaa pelaajan seuraavalle ammukselle lävistysominaisuuden.
 
--Pelaaja saa pisteitä siitä kuinka paljon vihollisia hän tuhoaa, ja jos hän voittaa, myös nopeudesta. !tehty!
+-Pelaaja saa pisteitä siitä kuinka paljon vihollisia hän tuhoaa, ja jos hän voittaa, myös nopeudesta.
 ## Jatkokehitysideat
 -Pelissä voisi olla loputon pelimuoto (endless mode).
